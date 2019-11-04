@@ -1,0 +1,25 @@
+server:
+  port: 8080
+#  servlet:
+#    context-path: /hello
+student:
+  name: aaa
+  age: 23
+spring:
+  mvc:
+    view:
+      prefix: /WEB_INF/views/
+      suffix: .jsp
+  datasource:
+    primary:
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      jdbc-url: jdbc:sqlserver://192.168.3.41:1433;Database=MES
+      username: sa
+      password: admin@123
+    secondary:
+        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        jdbc-url: jdbc:sqlserver://192.168.1.251:1433;Database=SAMO
+        username: sa
+        password: admin@123
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
