@@ -5,6 +5,8 @@ import com.gctchina.demo.dao.Student;
 import com.gctchina.demo.dao.entity.Owner;
 import com.gctchina.demo.dao.repository.pri.OwnerRepositoryA;
 import com.gctchina.demo.dao.repository.sec.OwnerRepositoryB;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +27,9 @@ public class MainController {
 
     @Autowired
     private Student std;
+
+    private static final Logger LOG = LoggerFactory.getLogger(MainController.class);
+
     @RequestMapping("/hello")
     public String hello(Model m) {
         Date d = new Date();
@@ -33,6 +38,9 @@ public class MainController {
         Owner ownerA =ownerRepositoryA.findAll().get(0);
         Owner ownerB =ownerRepositoryB.findAll().get(0);
 
+        LOG.info(ownerA.toString());
+        LOG.info(ownerB.toString());
+        LOG.error("----------------------------------------------------------");
         m.addAttribute("now",sdf.format(d));
         m.addAttribute("bbb",std.getAge());
         m.addAttribute("ccc",ownerA.toString());

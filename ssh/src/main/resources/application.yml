@@ -23,3 +23,9 @@ spring:
         password: admin@123
   jpa:
     database-platform: org.hibernate.dialect.SQLServerDialect
+logging:
+  #level: info
+  config: classpath:logback.xml
+
+#  logging.pattern.console=%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n
+#  logging.pattern.file=%d{yyyy/MM/dd-HH:mm} [%thread] %-5level %logger- %msg%n
