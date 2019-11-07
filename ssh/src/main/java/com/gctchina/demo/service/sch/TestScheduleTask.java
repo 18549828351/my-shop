@@ -1,6 +1,5 @@
 package com.gctchina.demo.service.sch;
 
-import com.gctchina.demo.controller.MainController;
 import com.gctchina.demo.dao.entity.Etl_cron;
 import com.gctchina.demo.dao.repository.sec.Etl_cronRepositoryB;
 import org.slf4j.Logger;
@@ -12,13 +11,9 @@ import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 import org.springframework.scheduling.support.CronTrigger;
 import org.springframework.stereotype.Component;
-import org.springframework.util.StringUtils;
 
-import javax.xml.crypto.Data;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.Date;
-import java.util.List;
 import java.util.Optional;
 
 @Component

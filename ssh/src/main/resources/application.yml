@@ -9,7 +9,7 @@ spring:
   mvc:
     view:
       prefix: /WEB_INF/views/
-      suffix: .jsp
+      #suffix: .jsp
   datasource:
     primary:
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
