@@ -18,7 +18,7 @@ spring:
       password: admin@123
     secondary:
         driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-        jdbc-url: jdbc:sqlserver://192.168.1.251:1433;Database=SAMO
+        jdbc-url: jdbc:sqlserver://192.168.3.41:1433;Database=MES
         username: sa
         password: admin@123
   jpa:
